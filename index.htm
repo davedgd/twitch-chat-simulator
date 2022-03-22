@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Streaming Study</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <script defer src="study.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+</head>
+
+<!-- Notes: be sure all Javascript (jQuery) are onload document onload-->
+
+<body oncontextmenu="return false;">
+
+    <div id="load" class="task tasktext">
+
+        <div style="position: absolute;" class="centerTask">Please wait for the content to load...</div>
+        <div id="progressBar" style="position: absolute; margin-top: 3em;">
+            <div id="progressTicks"></div>
+        </div>
+        <div id="loadEmotesAndBadges" style="width: 100px; height: 5px; position: absolute; margin-top: 6em;"></div>
+
+    </div>
+
+    <div id="maintask" class="task" style="display: none;">
+
+        <!-- Top Bar --->
+        <!--
+        <div class="wrapper">
+            <nav>
+            <div class="logo">STREAM</div>
+            <ul>
+
+                <li><a class="active" href="#">Log In</a></li>
+            </ul>
+            </nav>
+        </div>
+        -->
+
+        <!-- Video -->
+        <div id="frame">
+
+            <video disablePictureInPicture playsinline id="startVideo" src="" style="pointer-events: none;" onended="VideoEnded()"></video>
+            
+        </div>
+        
+        <!-- Chat -->
+        <div id="chatBar">
+            <div id="chatTitle">CHAT</div>
+            <hr>
+            <div id="chatText" >     
+                <p>Welcome to the chat!</p>
+                <!-- Chat text will append here -->
+            </div>
+        
+            <!--
+            <div id="chatBox">
+                <p>Send a message</p>
+            </div>
+            -->
+        </div>        
+    
+        <!-- Controls/Debug -->
+        <div id="appControls">
+            <button class="myBtn" id="StartVideo" onclick="StartVideo()" disabled style="display: none;">Start Video</button>
+            <!--<button class="myBtn" id="HideChat" onclick="ToggleChat()">Toggle Chat</button>-->
+        </div>
+
+    </div>
+
+</body>
+
+</html>

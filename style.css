@@ -1,0 +1,264 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Inter, Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif;    
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #18181b;
+}
+
+.tasktext {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.task {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #18181b;
+}
+
+/* Buttons */
+.myBtn {
+    background-color: #9147ff;
+    padding: 5px;
+    color: white;
+    border: white;
+    border-radius: 4px;
+    transition-duration: 0.4s
+    
+}
+
+.myBtn:hover {
+    background-color: darkorchid
+}
+
+/* Scrollbar */
+#chatText::-webkit-scrollbar {
+    width: 10px;  /* Remove scrollbar space */
+    background : transparent;  /* Make scrollbar invisible */
+}
+
+#chatText::-webkit-scrollbar:hover {
+    width: 10px;  /* Show scrollbar space */
+    background : black;  /* Make scrollbar visible */
+    pointer-events: none;
+}
+
+#chatText::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+#chatText::-webkit-scrollbar-thumb:hover {
+    width: 10px;
+    background: gray;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+/* Top Bar */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+nav .logo {
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    transition: .3s;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 80px;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+nav ul li a.active {
+    background: #9147ff;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* Divs */
+
+#frame {
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    height: 75vh;
+    background-color: #0e0e10;
+    border: 1px solid gray;
+    margin: auto;
+    min-height: 400px;
+}
+
+/* Bottom bar */
+
+#appControls {
+    /*
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    float: bottom;
+    background-color: #0e0e10;
+    width: 100%;
+    height: 75px;
+    padding: 10px 75px;
+    box-sizing: border-box;
+    transition: .3s;   
+    */
+    position: fixed;
+    height: 75px;
+    padding: 10px 75px;
+    bottom: 0;
+    text-align: center;
+}
+
+/* Video */
+
+#startVideo {
+    max-width: 100%;
+    max-height: 100%;
+    pointer-events: all;
+    padding-bottom: 1px;
+}
+
+/* Chat */
+
+.chatLines {
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+
+#chatBar {
+    color: rgb(239, 239, 241);
+    vertical-align: center;
+    margin: auto;
+    width: 25vw;
+    min-width: 150px;
+    min-height: 400px;
+    height: 75vh;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #18181b;
+    border: 1px solid gray;
+    border-left: 0px;
+    pointer-events: none;
+    position: relative;
+}
+
+#chatBody {
+    color: rgb(239, 239, 241);
+    font-size: 13px;
+}
+
+#userName {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#timeText {
+    font-size: 12px;
+    color: rgb(239, 239, 241);
+    font-weight: 400;
+}
+
+.badgeIcon {
+    margin-bottom: 0px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.emote {
+    margin-bottom: 0px;
+    margin-right: 2px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+.hiddenEmotesAndBadges {
+    opacity: .01; 
+    width: 1px; 
+    height: 1px
+}
+
+#chatText {
+    padding-left: 10px;
+    width: 100%;
+    height: 62vh;
+    background-color: #18181b;
+    color: white;
+    margin-right: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none;
+}
+
+#chatBox {
+    text-align: left;
+    background-color: #4e4e4e;
+    padding: 5px 15px 5px 15px;
+    width: 95%;
+    border-radius: 10px;
+    font-size: smaller;
+    position: absolute;
+    left: 2.5%;
+    bottom: 5px;
+    right: 2.5%;
+}
+
+#chatTitle {
+    text-align: center;
+    color: white;
+    background-color: #1f1f23;
+    text-emphasis: bold;
+    padding: 10px;
+}
+
+#progressBar {
+    width: 360px;
+    background-color: lightgrey;
+}
+  
+#progressTicks {
+    width: 0%;
+    height: 3px;
+    display: block;
+    background-color: #04AA6D;
+}
